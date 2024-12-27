@@ -1,0 +1,133 @@
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation Classes */
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.8s ease-out;
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.5s ease-out;
+}
+
+.animate-bounce {
+  animation: bounce 1s;
+}
+
+/* Scroll Reveal Classes */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+
+.reveal.fade-bottom {
+  transform: translateY(50px);
+}
+
+.reveal.fade-bottom.active {
+  transform: translateY(0);
+}
+
+.reveal.fade-left {
+  transform: translateX(-100px);
+}
+
+.reveal.fade-left.active {
+  transform: translateX(0);
+}
+
+.reveal.fade-right {
+  transform: translateX(100px);
+}
+
+.reveal.fade-right.active {
+  transform: translateX(0);
+}
+
+/* Hover Effects */
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+/* Menu Card Animations */
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Input Animations */
+.input-group {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(222, 117, 12, 0.2);
+}
+
+/* Social Icons Animation */
+.socials a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-5px) scale(1.1);
+}
